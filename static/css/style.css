@@ -1,0 +1,161 @@
+/* En static/css/style.css */
+
+body {
+    background-color: #222;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+}
+
+#simulationArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#sidePanel {
+    width: 100%;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#controls {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#resetButton {
+    background-color: #660033;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#resetButton:hover {
+    background-color: #990033;
+}
+
+#stats {
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+canvas {
+    background-color: #8FBC8F;
+    border-radius: 4px;
+}
+
+#snakeList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#snakeList li {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: calc(20% - 10px);
+    min-width: 150px;
+    flex-grow: 1;
+}
+
+#snakeList li div {
+    margin-bottom: 4px;
+}
+
+/* Estilos para la información de genes */
+.gene-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.gene-tooltip {
+    margin-left: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.gene-tooltip span {
+    font-size: 12px;
+    color: #fff;
+}
+
+.tooltip-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    border: 1px solid #555;
+    padding: 10px;
+    width: 280px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 100;
+    left: 20px;
+    top: -10px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.gene-tooltip:hover .tooltip-content {
+    display: block;
+}
+
+.tooltip-content p {
+    margin: 0 0 8px 0;
+}
+
+.tooltip-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Puedes añadir estilos personalizados aquí si lo deseas */
+/* Por ejemplo:
+
+body {
+    background-color: #eef;
+}
+
+h1 {
+    color: navy;
+}
+
+*/ 

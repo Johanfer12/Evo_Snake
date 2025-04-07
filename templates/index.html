@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serpientes Evolutivas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Estilos básicos si style.css no se carga o está vacío */
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        canvas {
+            border: 1px solid black;
+            display: block; /* Asegura que no haya espacio extra debajo */
+            margin-top: 15px;
+        }
+        #stats {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="simulationArea">
+            <h1>Simulación de Serpientes Evolutivas</h1>
+            <div id="controls">
+                <button id="resetButton">Reiniciar Simulación</button>
+            </div>
+            <div id="stats">Cargando...</div>
+            <canvas id="gameCanvas" data-width="{{ width | default(30) }}" data-height="{{ height | default(20) }}">
+                <!-- El tamaño se ajustará por JS -->
+            </canvas>
+        </div>
+        <div id="sidePanel">
+            <h2>Estadísticas por Serpiente</h2>
+            <div id="snakeList"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
